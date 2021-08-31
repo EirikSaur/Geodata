@@ -47,7 +47,6 @@ public class Main {
                     content.append(line);
                 }
 
-                System.out.println(content.toString());
                 JSONObject jsonObject = new JSONObject(content.toString());
                 Double exchangeModifier = jsonObject.getJSONObject("rates").getDouble(inputMap.get(EXCHANGE_CURRENCY));
                 System.out.println(SupportingMethods.calculateValue(Double.valueOf(inputMap.get(AMOUNT)),exchangeModifier));
