@@ -79,7 +79,6 @@ public class SupportingMethods {
 
     public static HttpURLConnection setupConnection(String exchangeRateDate,String base, String symbols) throws IOException {
         try {
-            System.out.println(String.format(URL_TEMPLATE, exchangeRateDate, API_KEY, base, symbols));
             URL url = new URL(String.format(URL_TEMPLATE, exchangeRateDate, API_KEY, base, symbols));
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod(GET_REQUEST);
